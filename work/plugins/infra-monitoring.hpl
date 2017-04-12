@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Group-Id: jenkins-infrastructure-monitoring
+Short-Name: infra-monitoring
+Long-Name: infra-monitoring
+Plugin-Version: 0.0.1-SNAPSHOT (private-04/12/2017 11:59-carlos)
+Hudson-Version: 2.32.3
+Jenkins-Version: 2.32.3
+Plugin-Developers: 
+Libraries: /home/carlos/Documents/workspace-sts-3.8.3.RELEASE/infra-mo
+ nitoring/target/classes
+Resource-Path: /home/carlos/Documents/workspace-sts-3.8.3.RELEASE/infr
+ a-monitoring/src/main/webapp
+

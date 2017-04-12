@@ -1,0 +1,32 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:x="jelly:xml">
+<st:contentType value="text/html;charset=UTF-8" />
+<x:doctype name="html" />
+<html>
+
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>InfrastructureMonitor</title>    
+ 	<link rel="icon" type="image/x-icon" href="${rootURL}/jenkins/plugin/infra-monitoring/favicon.ico"/>
+
+  </head>
+
+	  <body class="build-monitor dashboard industrial">
+    	
+    <div id="infraMonitoring-container">
+    	<app-root urlJenkins="${app.rootUrl}">Loading...</app-root>
+    </div>
+    
+    <!-- Scripts SPA application -->
+    
+    
+    <script type="text/javascript" src="${rootURL}/jenkins/plugin/infra-monitoring/inline.bundle.js"></script>
+	<script type="text/javascript" src="${rootURL}/jenkins/plugin/infra-monitoring/styles.bundle.js"></script>
+	<script type="text/javascript" src="${rootURL}/jenkins/plugin/infra-monitoring/vendor.bundle.js"></script>
+	<script type="text/javascript" src="${rootURL}/jenkins/plugin/infra-monitoring/main.bundle.js"></script>
+
+	
+  </body>
+
+</html>
+</j:jelly>

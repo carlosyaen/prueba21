@@ -1,0 +1,8 @@
+META-INF/annotations/hudson.Extension.txt
+META-INF/exposed.stapler-beans
+org/jenkinsci/plugins/infrastructuremon/InfrastructureMonitoringViewAction.class
+META-INF/annotations/org.kohsuke.stapler.export.ExportedBean
+org/jenkinsci/plugins/infrastructuremon/InfrastructureMonitoringViewAction.javadoc
+org/jenkinsci/plugins/infrastructuremon/InfrastructureMonitoringViewAction$InfrastructureMonitoringViewActionDescriptor.class
+org/jenkinsci/plugins/infrastructuremon/InfrastructureMonitoringViewActionFactory.class
+META-INF/annotations/hudson.Extension
