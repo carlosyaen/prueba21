@@ -13,7 +13,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>exit 2</command>
+      <command>exit 0</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

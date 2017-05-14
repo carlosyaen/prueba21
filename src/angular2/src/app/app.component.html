@@ -26,19 +26,6 @@
 
 
   <div class="main">
-    <div id="listaFallos" class="main col-md-4">
-      <h3>
-        {{title3}}
-      </h3>
-      <li *ngFor="let job of failureList">
-        <div *ngIf="isFailure(job.result)" class="color2">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
-        </div>
-        <div *ngIf="!isFailure(job.result)" class="color1">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
-        </div>
-      </li>
-    </div>
     <div id="listaExitos" class="main col-md-4">
       <h3>
         {{title2}}
@@ -52,6 +39,7 @@
         </div>
       </li>
     </div>
+
     <div id="listaFallosRepentinos" class="main col-md-4">
       <h3>
         {{title4}}
@@ -65,6 +53,22 @@
         </div>
       </li>
     </div>
+
+    <div id="listaFallos" class="main col-md-4">
+      <h3>
+        {{title3}}
+      </h3>
+      <li *ngFor="let job of failureList">
+        <div *ngIf="isFailure(job.result)" class="color2">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+        <div *ngIf="!isFailure(job.result)" class="color1">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+      </li>
+    </div>
+
+    
   </div>
 </div>
 
