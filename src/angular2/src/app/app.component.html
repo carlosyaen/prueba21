@@ -1,0 +1,79 @@
+
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<header>
+  <div class="container">
+    <h1>{{title}}</h1>
+  </div>
+</header>
+
+
+<body>
+<div class = "container">
+
+  <button (click)="getAllTheJobs()">
+    Buscar
+  </button>
+
+
+  <div class="main">
+    <div id="listaFallos" class="main col-md-4">
+      <h3>
+        {{title3}}
+      </h3>
+      <li *ngFor="let job of failureList">
+        <div *ngIf="isFailure(job.result)" class="color2">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+        <div *ngIf="!isFailure(job.result)" class="color1">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+      </li>
+    </div>
+    <div id="listaExitos" class="main col-md-4">
+      <h3>
+        {{title2}}
+      </h3>
+      <li *ngFor="let job of successList">
+        <div *ngIf="isFailure(job.result)" class="color2">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+        <div *ngIf="!isFailure(job.result)" class="color1">
+          <a href="{{job.url}}"> <font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+      </li>
+    </div>
+    <div id="listaFallosRepentinos" class="main col-md-4">
+      <h3>
+        {{title4}}
+      </h3>
+      <li *ngFor="let job of brokenList">
+        <div *ngIf="isFailure(job.result)" class="color2">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+        <div *ngIf="!isFailure(job.result)" class="color1">
+          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
