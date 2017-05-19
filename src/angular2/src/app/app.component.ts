@@ -31,67 +31,6 @@ export class AppComponent implements OnInit{
   title4 = 'Semistable Jobs';
 
 
-    
-
-    /*v2 obtiene jobs y toda la pesca.
-
-    
-/*
-	getAllTheJobs(JobsURL: string){
-
-		this.http.get(JobsURL).subscribe(
-				response => {
-					let data = response.json();
-					for (var i = 0; i < data.jobs.length; i++){
-						this.http.get(data.jobs[i].url + this.finalURL).subscribe(
-								response => {
-									let data2 = response.json();
-									if (data2.builds.length < 10){
-										this.http.get(data2.builds[0].url + this.finalURL).subscribe(
-												response => {
-													let data3 = response.json();
-													if (data3.result == "SUCCESS"){
-														this.successList.push(new Job(data3.fullDisplayName, data3.result, data3.url));
-													} else if (data3.result == "FAILURE"){
-														this.failureList.push(new Job(data3.fullDisplayName,data3.result, data3.url));
-													}
-												},
-												error => console.error(error)
-												)
-									} else {
-										let isBroken: boolean = false;
-									let added: boolean = false;
-									for (var j = 0; j <10; j++){
-										//let data3 = this.http.get(data2.builds[j].url + this.finalURL).map((res:Response) => res.json());
-                    let data3 = this.http.get(data2.builds[j].url + this.finalURL).map(response => response.json());
-										if (j==0 && data3.result == "FAILURE"){
-											isBroken = true;
-											let newJob = new Job (data3.fullDisplayName, data3.result, data3.url);
-										} else if (data3.result == "SUCCESS") {
-											this.successList.push(new Job(data3.fullDisplayName, data3.result, data3.url));
-											added = true;
-										}else if((j==1 || j == 2 || j == 3 || j == 4 || j == 5 || j == 6 || j == 7 || j == 8 || j == 9) && isBroken && data3.result == "SUCCESS"){
-											isBroken = true;
-										} else {
-											isBroken = false;
-										}
-                  }
-										if(isBroken && !added){
-											this.brokenList.push(newJob);
-										}else if (!isBroken && !added){
-											this.failureList.push(newJob);
-										}
-                  }
-									},
-									error =>console.error(error)
-								);
-                }
-					},
-					error => console.error(error)
-				);
-}*/
-
- //afterviewinit 
 /*
      getAllTheJobs(){
       this.successList = [];
