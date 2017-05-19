@@ -31,65 +31,12 @@ export class AppComponent implements OnInit{
   title4 = 'Semistable Jobs';
 
 
-//SI SE DESCOMENTA TODO Y SE CAMBIA EL ATRIBUTO DEL BOTON FUNCIONA PERO NO AL PRIMER CLICK
-  /*  getAllAux(JobsURL: string){
-      this.getAllTheJobs(JobsURL);
-      for (var i = 0; i < this.AllJobsURL.length; i ++){
-      this.getBuilds(this.AllJobsURL[i] + this.finalURL);
-      }
-      for (var j = 0; j < this.AllBuildsURL.length; j++){
-      this.getJob(this.AllBuildsURL[j] + this.finalURL);
-      }
-    }
 
-    getAllTheJobs(JobsURL: string){
 
-      this.http.get(JobsURL).subscribe(
-        response => {
-          let data = response.json();
-          for (var i = 0; i < data.jobs.length; i++){
-            this.AllJobsURL.push(data.jobs[i].url);
-          }
-        },
-        error => console.error(error)
-      );
 
-    }
+
 
     
-    getBuilds(JobsURL: string){
-
-      this.http.get(JobsURL).subscribe(
-        response => {
-          let data = response.json();
-            for (var i = 0; i < data.builds.length; i++){
-            this.AllBuildsURL.push(data.builds[i].url);
-          }
-
-        }
-      )
-
-    }
-
-
-
-
-
-    getJob(JobsURL: string){
-
-    this.http.get(JobsURL).subscribe(
-        response => {
-            let data = response.json();
-            if (data.result == "SUCCESS"){
-              this.successList.push(new Job(data.fullDisplayName, data.result, data.url));
-            } else if (data.result == "FAILURE"){
-              this.failureList.push(new Job(data.fullDisplayName,data.result, data.url));
-            }
-        },
-        error => console.error(error)
-    );
-
-    }*/
 
     /*v2 obtiene jobs y toda la pesca.
 
