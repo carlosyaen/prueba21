@@ -31,46 +31,11 @@ export class AppComponent implements OnInit{
   title4 = 'Semistable Jobs';
 
 
-
-
-
-
-
     
 
     /*v2 obtiene jobs y toda la pesca.
 
-    getAllTheJobs(JobsURL: string){
-
-      this.http.get(JobsURL).subscribe(
-        response => {
-          let data = response.json();
-          for (var i = 0; i < data.jobs.length; i++){
-            this.http.get(data.jobs[i].url + this.finalURL).subscribe(
-              response => {
-                let data2 = response.json();
-                for (var i = 0; i < data2.builds.length; i++){
-                  this.http.get(data2.builds[i].url + this.finalURL).subscribe(
-                    response => {
-                      let data3 = response.json();
-                      if (data3.result == "SUCCESS"){
-                      this.successList.push(new Job(data3.fullDisplayName, data3.result, data3.url));
-                      } else if (data3.result == "FAILURE"){
-                      this.failureList.push(new Job(data3.fullDisplayName,data3.result, data3.url));
-                      }
-                    },
-                    error => console.error(error)
-                  )
-                } 
-              },
-              error =>console.error(error)
-            )
-          }
-        },
-        error => console.error(error)
-      );
-
-    }*/
+    
 /*
 	getAllTheJobs(JobsURL: string){
 
@@ -127,7 +92,7 @@ export class AppComponent implements OnInit{
 }*/
 
  //afterviewinit 
-
+/*
      getAllTheJobs(){
       this.successList = [];
       this.failureList = [];
@@ -192,15 +157,15 @@ export class AppComponent implements OnInit{
 					error => console.error(error)
 				);
         }
-
+*/
    ngOnInit(){ 
-     IntervalObservable.create(7000).subscribe(reponse => {
+     IntervalObservable.create(3000).subscribe(reponse => {
         this.getAllTheJobs();
      });
    }
 
 
- /*
+ 
     getAllTheJobs(){
       this.successList = [];
       this.failureList = [];
@@ -257,7 +222,7 @@ export class AppComponent implements OnInit{
         //console.log(this.resultado);
         //console.log(this.brokenList);
         //console.log(this.successList);
-        }*/
+        }
     
 isFailure(d: string){
   return (d=="FAILURE");
