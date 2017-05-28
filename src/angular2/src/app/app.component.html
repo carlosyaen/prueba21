@@ -32,10 +32,10 @@
       </h3>
       <li *ngFor="let job of successList">
         <div *ngIf="isFailure(job.result)" class="color2">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+          <a href="{{job.urlJob}}"><font color=white>{{job.name}}</font></a> , {{job.result}} , <a href="{{job.urlBuild}}"><font color=white>{{job.number}}</font></a>
         </div>
         <div *ngIf="!isFailure(job.result)" class="color1">
-          <a href="{{job.url}}"> <font color=white>{{job.name}}</font></a> , {{job.result}}
+          <a href="{{job.urlJob}}"> <font color=white>{{job.name}}</font></a> , {{job.result}} , <a href="{{job.urlBuild}}"><font color=white>{{job.number}}</font></a>
         </div>
       </li>
     </div>
@@ -46,10 +46,10 @@
       </h3>
       <li *ngFor="let job of brokenList">
         <div *ngIf="isFailure(job.result)" class="color2">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+          <a href="{{job.urlJob}}"><font color=white>{{job.name}}</font></a> , {{job.result}} , <a href="{{job.urlBuild}}"><font color=white>{{job.number}}</font></a>
         </div>
         <div *ngIf="!isFailure(job.result)" class="color1">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+          <a href="{{job.urlJob}}"><font color=white>{{job.name}}</font></a> , {{job.result}} , <a href="{{job.urlBuild}}"><font color=white>{{job.number}}</font></a>
         </div>
       </li>
     </div>
@@ -60,10 +60,10 @@
       </h3>
       <li *ngFor="let job of failureList">
         <div *ngIf="isFailure(job.result)" class="color2">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+          <a href="{{job.urlJob}}"><font color=white>{{job.name}}</font></a> , {{job.result}} , <a href="{{job.urlBuild}}"><font color=white>{{job.number}}</font></a>
         </div>
         <div *ngIf="!isFailure(job.result)" class="color1">
-          <a href="{{job.url}}"><font color=white>{{job.name}}</font></a> , {{job.result}}
+          <a href="{{job.urlJob}}"><font color=white>{{job.name}}</font></a> , {{job.result}} , <a href="{{job.urlBuild}}"><font color=white>{{job.number}}</font></a>
         </div>
       </li>
     </div>

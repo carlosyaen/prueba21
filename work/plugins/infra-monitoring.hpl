@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Group-Id: jenkins-infrastructure-monitoring
 Short-Name: infra-monitoring
 Long-Name: infra-monitoring
-Plugin-Version: 0.0.1-SNAPSHOT (private-05/19/2017 14:08-carlos)
+Plugin-Version: 0.0.1-SNAPSHOT (private-05/28/2017 13:53-carlos)
 Hudson-Version: 2.32.3
 Jenkins-Version: 2.32.3
 Plugin-Developers: 
